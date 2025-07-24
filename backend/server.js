@@ -9,7 +9,11 @@ import path from "path";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 // app config
-
+const corsConfig ={
+  origin:"*",
+  credential:true,
+  methods:["GET","POST","PUT","DELETE"],
+}
 const app = express();
 const port = 4000;
 
@@ -17,8 +21,10 @@ const port = 4000;
 
 // app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors(corsConfig));
+
 app.use(bodyParser.json());
+app.options("", cors(corsConfig));
 
 //db connection
 
