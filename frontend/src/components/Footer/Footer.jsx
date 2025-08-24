@@ -55,7 +55,7 @@ const Footer = () => {
       </div>
       <hr className="hr" />
       <p className="footer-copyright">
-        Copyright 2025 © Dinefeast.netlify.app - All Right Reserved. | Developed
+        Copyright 2025 © Dinefeast.shop - All Right Reserved. | Developed
         by Ujjwal Pal
       </p>
     </div>
