@@ -1,5 +1,8 @@
 // Rough
 
+import os from "os";
+import fs from "fs";
+
 let arr = [
   {
     name: "Ujjwal",
@@ -31,6 +34,13 @@ let arr = [
   },
 ];
 
+let user = os.userInfo();
+console.log(user);
+
+fs.appendFile("rough.txt", "hello", () => {
+  console.log("completed");
+});
+console.log(typeof arr);
 // arr.forEach((valu, no) => console.log(no, valu));
 
 // let no = [35, 18, 15, 14, 25, 75, 22, 21, 19];
@@ -83,17 +93,17 @@ let arr = [
 // getData();
 
 // closure
-let no1 = (a) => {
-  console.log("live viewers " + a);
-  return (b) => {
-    return (c) => {
-      return a + b + c;
-    };
-  };
-};
+// let no1 = (a) => {
+//   console.log("live viewers " + a);
+//   return (b) => {
+//     return (c) => {
+//       return a + b + c;
+//     };
+//   };
+// };
 
-let ans = no1(5)(4)(16);
-console.log(ans);
+// let ans = no1(5)(4)(16);
+// console.log(ans);
 
 // const sum = no(5);
 // console.log(sum(10));
