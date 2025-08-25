@@ -9,7 +9,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
-  const url = "http://localhost:4000";
+  const url =
+    import.meta.env.VITE_API_URL ||
+    "http://dine-feast-env.eba-7ntepcbg.ap-south-1.elasticbeanstalk.com";
   return (
     <div>
       <ToastContainer />
